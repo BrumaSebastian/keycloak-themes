@@ -1,3 +1,4 @@
+import "./main.css";
 import type { DeepPartial } from "keycloakify/tools/DeepPartial";
 import type { KcContext } from "./KcContext";
 import KcPage from "./KcPage";
