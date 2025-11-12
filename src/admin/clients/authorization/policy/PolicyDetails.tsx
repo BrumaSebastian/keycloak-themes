@@ -48,6 +48,8 @@ import { Time } from "./Time";
 import { User } from "./User";
 
 import "./policy-details.css";
+import { GroupRole } from "./GroupRole";
+import { EmptyPolicy } from "./EmptyPolicy";
 
 type Policy = Omit<PolicyRepresentation, "roles"> & {
     groups?: GroupValue[];
@@ -66,6 +68,8 @@ const COMPONENTS: {
     regex: Regex,
     role: Role,
     time: Time,
+    "group-role": GroupRole,
+    empty: EmptyPolicy,
     js: JavaScript
 } as const;
 
@@ -193,7 +197,7 @@ export default function PolicyDetails() {
     function getComponentType() {
         return isValidComponentType(policyType)
             ? COMPONENTS[policyType]
-            : COMPONENTS["js"];
+            : COMPONENTS["empty"];
     }
 
     const ComponentType = getComponentType();
