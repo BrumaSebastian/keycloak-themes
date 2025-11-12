@@ -1,6 +1,7 @@
 # This file is managed by Keycloakify, do not edit it manually.
 
 # === Owned files start ===
+# admin/clients/authorization/policy/PolicyDetails.tsx
 # === Owned files end =====
 
 # === @keycloakify/keycloak-admin-ui v260305.0.0 ===
@@ -609,7 +610,6 @@
 /admin/clients/authorization/policy/LogicSelector.tsx
 /admin/clients/authorization/policy/NameDescription.tsx
 /admin/clients/authorization/policy/policy-details.css
-/admin/clients/authorization/policy/PolicyDetails.tsx
 /admin/clients/authorization/policy/Regex.tsx
 /admin/clients/authorization/policy/Role.tsx
 /admin/clients/authorization/policy/Time.tsx
