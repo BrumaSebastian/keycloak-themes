@@ -1,6 +1,7 @@
 # This file is managed by Keycloakify, do not edit it manually.
 
 # === Owned files start ===
+# admin/i18n/messages_en.properties
 # admin/context/realm-context/useHash.tsx
 # admin/clients/authorization/policy/PolicyDetails.tsx
 # === Owned files end =====
@@ -83,7 +84,6 @@
 /admin/i18n/i18n.ts
 /admin/i18n/messages_ca.properties
 /admin/i18n/messages_de.properties
-/admin/i18n/messages_en.properties
 /admin/i18n/messages_es.properties
 /admin/i18n/messages_fr.properties
 /admin/i18n/messages_it.properties

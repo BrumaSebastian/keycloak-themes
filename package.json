@@ -1,10 +1,10 @@
 {
-    "name": "keycloakify-starter",
-    "version": "0.0.0",
-    "description": "Starter for Keycloakify 11",
+    "name": "keycloakify-blazor-management",
+    "version": "1.0.0",
+    "description": "Custom themes for keycloak",
     "repository": {
         "type": "git",
-        "url": "git://github.com/codegouvfr/keycloakify-starter.git"
+        "url": "https://github.com/BrumaSebastian/keycloak-themes"
     },
     "type": "module",
     "scripts": {
