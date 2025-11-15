@@ -1,6 +1,7 @@
 # This file is managed by Keycloakify, do not edit it manually.
 
 # === Owned files start ===
+# admin/context/realm-context/useHash.tsx
 # admin/clients/authorization/policy/PolicyDetails.tsx
 # === Owned files end =====
 
@@ -427,7 +428,6 @@
 /admin/context/auth/admin-ui-endpoint.ts
 /admin/context/auth/uiRealmInfo.ts
 /admin/context/realm-context/RealmContext.tsx
-/admin/context/realm-context/useHash.tsx
 /admin/context/server-info/ServerInfoProvider.tsx
 /admin/context/whoami/WhoAmI.tsx
 /admin/dashboard/routes/Dashboard.tsx

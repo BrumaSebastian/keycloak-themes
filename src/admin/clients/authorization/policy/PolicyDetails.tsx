@@ -68,7 +68,7 @@ const COMPONENTS: {
     regex: Regex,
     role: Role,
     time: Time,
-    "group-role": GroupRole,
+    groupRole: GroupRole,
     empty: EmptyPolicy,
     js: JavaScript
 } as const;
