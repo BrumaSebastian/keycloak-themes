@@ -1626,9 +1626,9 @@
         "strictTransportSecurity": "max-age=31536000; includeSubDomains"
     },
     "smtpServer": {},
-    "loginTheme": "keycloakify-starter",
+    "loginTheme": "keycloak-blazor-management",
     "accountTheme": "",
-    "adminTheme": "keycloakify-starter",
+    "adminTheme": "keycloak-blazor-management",
     "emailTheme": "",
     "eventsEnabled": false,
     "eventsListeners": ["keycloakify-logging", "jboss-logging"],

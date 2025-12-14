@@ -1,3 +1,479 @@
-.kcFormHeaderClass {
-    border: 3px solid blue;
+/* Page background and layout */
+.app-body {
+    background: #f5f7fa !important; /* light gray */
+    min-height: 100vh;
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+/* Center container */
+.app-container {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+/* Card look */
+.app-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(16, 24, 40, 0.08);
+    padding: 48px;
+    border: 1px solid #e4e7ec;
+}
+
+/* Header */
+.app-header {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+#kc-page-description,
+.kc-login-info-text {
+    text-align: center;
+    color: #667085;
+    margin-bottom: 24px;
+}
+
+/* Form groups */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-label {
+    display: block;
+    font-size: 14px;
+    color: #344054;
+    margin-bottom: 8px;
+}
+
+/* Inputs */
+.form-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #101828;
+    background: #fff;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #84caff;
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.15);
+}
+
+/* Password input + toggle */
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.password-toggle {
+    background: transparent;
+    border: none;
+    color: #667085;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.password-toggle:hover {
+    background: #f2f4f7;
+}
+
+.icon-show::before,
+.icon-hide::before {
+    content: "👁"; /* replace with an icon font if available */
+    font-size: 16px;
+}
+
+/* Inline error */
+.input-error {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #d92d20;
+}
+
+/* Forgot password link row */
+.form-options {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 13px;
+}
+
+.form-options a {
+    color: #667085;
+    text-decoration: none;
+}
+
+.form-options a:hover {
+    color: #475467;
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #2e7cf7; /* blue */
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #1f6be0;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.btn-lg {
+    height: 44px;
+    font-size: 15px;
+}
+
+/* Social providers section (optional) */
+.social-section {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.social-list {
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.social-list-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: #101828;
+    background: #fff;
+}
+
+.social-button:hover {
+    background: #f9fafb;
+}
+
+.social-icon {
+    font-size: 16px;
+    color: #667085;
+}
+
+.social-text {
+    font-size: 14px;
+}
+
+/* Registration row at bottom */
+#kc-registration-container {
+    margin-top: 16px;
+    text-align: center;
+    color: #667085;
+}
+
+#kc-registration-container a {
+    color: #2e7cf7;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#kc-registration-container a:hover {
+    text-decoration: underline;
+}
+
+/* Optional: constrain max width of form for tighter look */
+#kc-form-wrapper {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.app-topbar {
+    position: sticky; /* stays at top while scrolling */
+    top: 0;
+    background: #ffffff;
+    border-bottom: 1px solid #e4e7ec;
+    z-index: 10;
+}
+
+.app-topbar__inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.app-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.app-brand__logo {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #2e7cf7; /* blue dot like your screenshot */
+    box-shadow: 0 0 0 3px rgba(46, 124, 247, 0.25) inset;
+}
+
+.app-brand__name {
+    font-weight: 600;
+    color: #101828;
+}
+
+.app-nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.app-nav__link {
+    color: #475467;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.app-nav__link:hover {
+    color: #344054;
+}
+
+.app-nav__cta {
+    padding: 8px 14px;
+}
+
+/* Kill PatternFly’s bg image on the login container, at all breakpoints */
+.login-pf,
+.login-pf-page,
+.login-pf body,
+@media (min-width: 0) {
+    .login-pf,
+    .login-pf-page,
+    .login-pf body {
+        background: none !important;
+        background-image: none !important;
+    }
+}
+
+/* Optional: explicitly unset the Keycloak default image path */
+.login-pf body {
+    background: none !important;
+    background-image: none !important;
+}
+
+/* Our container/card */
+.app-container {
+    max-width: 760px;
+    margin: 24px auto;
+}
+.app-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(16, 24, 40, 0.08);
+    padding: 48px;
+    border: 1px solid #e4e7ec;
+}
+
+/* Top bar remains the same */
+.app-topbar {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    border-bottom: 1px solid #e4e7ec;
+    z-index: 10;
+}
+.app-topbar__inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.app-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.app-brand__logo {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #2e7cf7;
+    box-shadow: 0 0 0 3px rgba(46, 124, 247, 0.25) inset;
+}
+.app-brand__name {
+    font-weight: 600;
+    color: #101828;
+}
+.app-nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.app-nav__link {
+    color: #475467;
+    text-decoration: none;
+    font-weight: 500;
+}
+.app-nav__link:hover {
+    color: #344054;
+}
+.app-nav__cta {
+    padding: 8px 14px;
+}
+
+/* Header + inputs + buttons (as you added) */
+.app-header {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+}
+#kc-page-description,
+.kc-login-info-text {
+    text-align: center;
+    color: #667085;
+    margin-bottom: 24px;
+}
+.form-group {
+    margin-bottom: 18px;
+}
+.form-label {
+    display: block;
+    font-size: 14px;
+    color: #344054;
+    margin-bottom: 8px;
+}
+.form-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #101828;
+    background: #fff;
+}
+.form-input:focus {
+    outline: none;
+    border-color: #84caff;
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.15);
+}
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.password-toggle {
+    background: transparent;
+    border: none;
+    color: #667085;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+}
+.password-toggle:hover {
+    background: #f2f4f7;
+}
+.icon-show::before,
+.icon-hide::before {
+    content: "👁";
+    font-size: 16px;
+}
+.input-error {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #d92d20;
+}
+.form-options {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 13px;
+}
+.form-options a {
+    color: #667085;
+    text-decoration: none;
+}
+.form-options a:hover {
+    color: #475467;
+    text-decoration: underline;
+}
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-primary {
+    background: #2e7cf7;
+    color: #fff;
+}
+.btn-primary:hover {
+    background: #1f6be0;
+}
+.btn-block {
+    width: 100%;
+}
+.btn-lg {
+    height: 44px;
+    font-size: 15px;
+}
+#kc-registration-container {
+    margin-top: 16px;
+    text-align: center;
+    color: #667085;
+}
+#kc-registration-container a {
+    color: #2e7cf7;
+    font-weight: 600;
+    text-decoration: none;
+}
+#kc-registration-container a:hover {
+    text-decoration: underline;
+}
+#kc-form-wrapper {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+/* Ensure mobile doesn’t re-introduce Keycloak’s white bg replacement */
+@media (max-width: 767px) {
+    .login-pf body {
+        background: none !important;
+    }
+    .app-body {
+        background: #f5f7fa !important;
+    }
 }
